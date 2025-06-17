@@ -533,7 +533,9 @@ describe('glob - with restricted directory', function() {
     } finally {
       try {
         chmodSync(restrictedDir, 0o755);
-      } catch {}
+      } catch {
+        // ignore
+      }
     }
   });
 });
